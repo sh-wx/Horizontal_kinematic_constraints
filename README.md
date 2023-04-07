@@ -1,0 +1,2 @@
+# Horizontal_kinematic_constraints
+绑定边界，模型的最左侧点和最右侧点相绑定自由度，可以模拟剪切箱效果
