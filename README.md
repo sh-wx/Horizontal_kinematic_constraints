@@ -12,3 +12,5 @@
 将文件下载后放到Horizontal_kinematic_constraints文件夹中，然后放到C:\Users\你的用户名\abaqus_plugins\内，然后重启abaqus，即可
 
 ![1](https://user-images.githubusercontent.com/130127239/230577284-65c88ca0-8c4b-4d7b-bf9a-c8734be84201.png)
+
+（这个图的左侧和右侧也绑上了，懒得换图了。本质上就是同一高度的四条侧边上的点用mpc连上）
