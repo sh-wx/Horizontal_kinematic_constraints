@@ -1,3 +1,4 @@
+# -* - coding:UTF-8 -*-
 from abaqusGui import *
 from abaqusConstants import ALL
 import osutils, os
@@ -20,7 +21,7 @@ class Horizontal_kinematic_constraints_plugin(AFXForm):
         self.cmd = AFXGuiCommand(mode=self, method='main',
             objectName='Horizontal_kinematic_constraints', registerQuery=False)
         pickedDefault = ''
-        self.ModelnameKw = AFXStringKeyword(self.cmd, 'Modelname', True)
+        self.modelNameKw = AFXStringKeyword(self.cmd, 'modelName', True)
         self.PartNameKw = AFXStringKeyword(self.cmd, 'PartName', True)
         self.instancenameKw = AFXStringKeyword(self.cmd, 'instancename', True, 'Part-1-1')
         self.verticaldirectionKw = AFXStringKeyword(self.cmd, 'verticaldirection', True, 'Y')
