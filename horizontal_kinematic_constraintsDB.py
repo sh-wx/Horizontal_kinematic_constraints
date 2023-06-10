@@ -60,7 +60,11 @@ class Horizontal_kinematic_constraintsDB(AFXDataDialog):
         fileName = os.path.join(thisDir, '1.png')
         icon = afxCreatePNGIcon(fileName)
         FXLabel(p=self, text='', ic=icon)
-
+        
+        ComboBox_6 = AFXComboBox(p=self, ncols=0, nvis=1, text='MPC or RIGIDBODY(Only 3D):', tgt=form.MPCorRIGIDBODYKw, sel=0)
+        ComboBox_6.setMaxVisible(10)
+        ComboBox_6.appendItem(text='MPC')
+        ComboBox_6.appendItem(text='RIGIDBODY')
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def show(self):
 

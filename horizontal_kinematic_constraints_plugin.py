@@ -23,9 +23,9 @@ class Horizontal_kinematic_constraints_plugin(AFXForm):
         pickedDefault = ''
         self.modelNameKw = AFXStringKeyword(self.cmd, 'modelName', True)
         self.PartNameKw = AFXStringKeyword(self.cmd, 'PartName', True)
-        self.instancenameKw = AFXStringKeyword(self.cmd, 'instancename', True, 'Part-1-1')
+        self.instancenameKw = AFXStringKeyword(self.cmd, 'instancename', True)
         self.verticaldirectionKw = AFXStringKeyword(self.cmd, 'verticaldirection', True, 'Y')
-
+        self.MPCorRIGIDBODYKw = AFXStringKeyword(self.cmd, 'MPCorRIGIDBODY', True, 'MPC')
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def getFirstDialog(self):
 
