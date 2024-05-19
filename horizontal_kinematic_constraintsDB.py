@@ -53,6 +53,12 @@ class Horizontal_kinematic_constraintsDB(AFXDataDialog):
         msgHandler4 = str(self.__class__).split('.')[-1] + '.onComboBox_2instanceChanged'           
         exec('FXMAPFUNC(self, SEL_COMMAND, AFXDataDialog.ID_LAST+%d, %s)' % (msgCount4, msgHandler4) ) 
 
+        ComboBox_8 = AFXComboBox(p=self, ncols=0, nvis=1, text='link direction(Only 3D):', tgt=form.alongdKw, sel=0)
+        ComboBox_8.setMaxVisible(10)
+        ComboBox_8.appendItem(text='X')
+        ComboBox_8.appendItem(text='YZ')
+        ComboBox_8.appendItem(text='X and YZ')
+        
         ComboBox_5 = AFXComboBox(p=self, ncols=0, nvis=1, text='Vertical direction(Only 3D):', tgt=form.verticaldirectionKw, sel=0)
         ComboBox_5.setMaxVisible(10)
         ComboBox_5.appendItem(text='Y')
@@ -65,6 +71,16 @@ class Horizontal_kinematic_constraintsDB(AFXDataDialog):
         ComboBox_6.setMaxVisible(10)
         ComboBox_6.appendItem(text='MPC')
         ComboBox_6.appendItem(text='RIGIDBODY')
+        
+        ComboBox_7 = AFXComboBox(p=self, ncols=0, nvis=1, text='Auto or fromset:', tgt=form.setoraKw, sel=0)
+        ComboBox_7.setMaxVisible(10)
+        ComboBox_7.appendItem(text='Auto')
+        ComboBox_7.appendItem(text='fromset')
+        
+        AFXTextField(p=self, ncols=20, labelText='nodeSet:', tgt=form.set1Kw,  sel=0)
+    
+
+    
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def show(self):
 
@@ -73,6 +89,7 @@ class Horizontal_kinematic_constraintsDB(AFXDataDialog):
         self.form.modelNameKw.setValue(self.currentmodelName)
         mdb.models[self.currentmodelName].parts.registerQuery(self.updateComboBox_1Parts)
         mdb.models[self.currentmodelName].parts.registerQuery(self.updateComboBox_2instance)
+
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def hide(self):
